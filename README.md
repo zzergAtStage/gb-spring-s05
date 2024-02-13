@@ -1,5 +1,5 @@
 # Spring Data quiz
-GB Java Spring S06 APIs  
+GB Java Spring S05 APIs  
 
 ## 1. Normal task (Task part 01)
 Вам предстоит создать приложение для управления списком задач с использованием Spring Boot и Spring Data JPA. Требуется реализовать следующие функции:
