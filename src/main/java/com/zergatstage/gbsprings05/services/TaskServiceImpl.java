@@ -1,7 +1,7 @@
 package com.zergatstage.gbsprings05.services;
 
 import com.zergatstage.gbsprings05.model.Task;
-import com.zergatstage.gbsprings05.model.TasksNoDataFoundException;
+import com.zergatstage.gbsprings05.model.NoDataFoundException;
 import com.zergatstage.gbsprings05.repositories.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -38,7 +38,7 @@ public class TaskServiceImpl implements TaskService{
     @Override
     public Task getTaskById(long id) {
         return taskRepository.findById(id).orElseThrow(
-                () -> new TasksNoDataFoundException("NoData found")
+                () -> new NoDataFoundException("NoData found")
         );
     }
 

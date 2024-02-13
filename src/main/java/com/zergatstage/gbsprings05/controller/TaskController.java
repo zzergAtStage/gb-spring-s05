@@ -1,7 +1,7 @@
 package com.zergatstage.gbsprings05.controller;
 
 import com.zergatstage.gbsprings05.model.Task;
-import com.zergatstage.gbsprings05.model.TasksNoDataFoundException;
+import com.zergatstage.gbsprings05.model.NoDataFoundException;
 import com.zergatstage.gbsprings05.services.TaskServiceImpl;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -26,7 +26,7 @@ public class TaskController {
     public ResponseEntity<Task> getTaskById(@PathVariable("id") Long id) {
         try {
             return new ResponseEntity<>(taskService.getTaskById(id), HttpStatus.OK);
-        } catch (TasksNoDataFoundException ex) {
+        } catch (NoDataFoundException ex) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
